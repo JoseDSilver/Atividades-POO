@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Meu_carro {
+    private:
+        int velinsta = 15;
+
+    public:
+        int ano;
+        string marca;
+        string modelo;
+        int km_rodado;
+
+        int acelerar(int incremento){
+            velinsta += incremento;
+
+        }
+
+        int getVelocidade(){
+            return velinsta;
+        }
+};
+
+
+
+
+int main() {
+    Meu_carro carro;
+    int incremento;
+    cout << "Digite o ano: ";
+    cin >> carro.ano;
+    cout << "Digite a marca: ";
+    cin >> carro.marca;
+    cout << "Digite o incremento: ";
+    cin >> incremento;
+    carro.acelerar(incremento);
+
+    cout  << "Velocidade: " << carro.getVelocidade();
+  return 0;
+}
